@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1" onclick="displaycount()">box 1</div>
+    <div class="box" id="box2" onclick="reducecount()">box 2</div>
+
+    <div id="result">
+        score: 0;
+    </div>
+  
+</body>
+<script>
+   var count = (function(){
+       var counter = 0;
+       return function(){
+           return counter +=1;
+       }
+   })();
+   function displaycount(){
+       document.getElementById("result").innerHTML = "score:" + count();
+   }
+
+   var reduce = (function(){
+       var reducer = 0;
+       return function(){
+           return reducer -=1 ;
+       }
+   })();
+   function reducecount(){
+       document.getElementById("result").innerHTML = "score:" + reduce();
+   }
+
+
+   
+</script>
+</html>

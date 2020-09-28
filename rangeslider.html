@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>select the colors  <span id="coloroutput"></span></h2>
+    <label>red:</label>
+    <input  type="range"  id="rangeRed" value="0" min="0" max="255"><br>
+
+    <label>green:</label>
+    <input  type="range"  id="rangeGreen" value="139" min="0" max="255"><br>
+
+
+    <label>blue:</label>
+    <input  type="range"  id="rangeBlue" value="168" min="0" max="255"><br>
+
+    <script>
+        function changeColor(){
+            let red = document.getElementById('rangeRed').value;
+            let green = document.getElementById('rangeGreen').value;
+            let blue = document.getElementById('rangeBlue').value;
+            let color = 'rgb('+ red + ',' + green + ',' + blue + ')';
+            document.body.style.backgroundColor = color;
+            document.getElementById('coloroutput').innerHTML = ':' + color;
+
+        }
+        document.getElementById('rangeRed').addEventListner('input', changeColor);
+        document.getElementById('rangeGreen').addEventListner('input', changeColor);
+        document.getElementById('rangeBlue').addEventListner('input', changeColor);
+    </script>
+
+
+
+
+</body>
+</html>

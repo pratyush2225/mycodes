@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+   
+</div>
+</head>
+<body>
+    <input type="text" id="add_id" placeholder="enter a value">
+    <input type="button" value="ADD" onclick="add()">
+    <div id="show_id">
+    
+    <script>
+        var a = new Array();
+        document.write("<ul>")
+
+        function add()
+        {
+           b = document.getElementById("add_id").value; 
+           a.push(b);
+           document.getElementById("add_id").value = "";
+           show_data();
+        }
+        function remove_data(index_value){
+            a.splice(index_value, 1);
+            show_data();
+        }
+        function show_data(){
+            c='';
+           
+            for(i=0; i<a.length; i++){
+                c+= "<li>"+a[i]+"<input type='button' value ='Delete' onclick='remove_data("+a.indexOf(a[i])+")'>"+"</li>";
+            }
+           
+            document.getElementById("show_id").innerHTML= c;
+        }
+        document.write("</ul>")
+    </script>
+    
+</body>
+</html>
