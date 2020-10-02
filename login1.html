@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: yellow;
+        }
+        form{
+            
+            padding-top: 120px;
+            font-size: 30px;
+            text-align: center;
+        }
+        input{
+           background-color: rgb(195, 243, 117);
+            color: black;
+            width: 250px;
+            height: 40px;
+            font-size: 30px;
+        }
+        h1{
+            box-sizing: border-box;
+            width: 100%;
+            border: solid;
+            padding: 5px;
+            text-align: center;
+            font-size: 60px;
+           
+        }
+        #submit{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>LOGIN FORM</h1>
+    <form method="POST" action="login.php">
+        <input type="text" placeholder="enter your name" name="username"><br><br>
+        <input type = "password" placeholder="enter password" name="password"><br><br>
+         <input id="submit" type="submit" name="submit">
+      
+
+    </form>
+</body>
+</html>
